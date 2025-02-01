@@ -102,7 +102,7 @@
 name: bio_data
 description: "A new Flutter project."
 publish_to: 'none'
-version: 1.19.0+19
+version: 1.20.0+20
 
 environment:
   sdk: '>=3.2.0 <4.0.0'
@@ -135,10 +135,7 @@ dependencies:
   share_plus: ^10.1.4
   url_launcher: ^6.2.2
   permission_handler: 11.3.1
-  secure_application: ^4.0.1
   # no_screenshot: ^0.3.1
-
-
 
 dev_dependencies:
   flutter_lints: ^4.0.0

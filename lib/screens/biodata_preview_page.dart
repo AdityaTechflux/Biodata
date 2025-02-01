@@ -915,7 +915,7 @@ class _BiodataPreviewPageState extends State<BiodataPreviewPage> {
       if (hasValidPayment) {
         // Use app's documents directory instead of direct external storage
         final directory = await getApplicationDocumentsDirectory();
-        final filePath = '${directory.path}/biodata_${widget.biodataId}.pdf';
+        final filePath = '${directory.path}/biodata.pdf';
 
         debugPrint('Attempting to save PDF to: $filePath'); // Log file path
 
@@ -980,7 +980,7 @@ class _BiodataPreviewPageState extends State<BiodataPreviewPage> {
         await directory.create(recursive: true);
       }
 
-      final filePath = '${directory.path}/biodata_${widget.biodataId}.pdf';
+      final filePath = '${directory.path}/biodata.pdf';
       final file = File(filePath);
       await file.writeAsBytes(_pdfData!);
 
@@ -1053,11 +1053,11 @@ class _BiodataPreviewPageState extends State<BiodataPreviewPage> {
 
       pdf.addPage(
         pw.Page(
-          pageFormat: PdfPageFormat.legal,
+          pageFormat: PdfPageFormat.a4,
           build: (pw.Context context) {
             return pw.FullPage(
               ignoreMargins: true,
-              child: pw.Image(imageMemory, fit: pw.BoxFit.cover),
+              child: pw.Image(imageMemory, fit: pw.BoxFit.fill),
             );
           },
         ),
@@ -1080,7 +1080,7 @@ class _BiodataPreviewPageState extends State<BiodataPreviewPage> {
 
       // Create a temporary file
       final tempFile = File(
-        '${tempDir.path}/biodata_${DateTime.now().millisecondsSinceEpoch}.pdf',
+        '${tempDir.path}/biodata.pdf',
       );
 
       // Write the PDF data to the temporary file
@@ -1694,6 +1694,7 @@ class _BiodataPreviewPageState extends State<BiodataPreviewPage> {
                   side: BorderSide(color: Colors.orange, width: 2.w),
                 ),
                 onPressed: _isLoading ? null : _handlePdfCreation,
+                // onPressed: _isLoading ? null : ,
                 child: Text(
                   'Create PDF',
                   style: TextStyle(color: Colors.black, fontSize: 12.sp),

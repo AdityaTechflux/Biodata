@@ -788,7 +788,9 @@ class _HomePageState extends State<HomePage>
   }
 
   final String appLink =
-      "https://play.google.com/store/apps/details?id=com.iw.biodatamakermarathi&hl=en";
+      "https://play.google.com/store/apps/details?id=com.iw.lagnbiodatarmarathi";
+  // final String appLink =
+  //     "https://play.google.com/store/apps/details?id=com.iw.biodatamakermarathi&hl=en";
 
   void _rateApp(BuildContext context) {
     showDialog(
@@ -838,7 +840,7 @@ class _HomePageState extends State<HomePage>
 
   void _shareApp() {
     const String appLink =
-        'https://play.google.com/store/apps/details?id=com.marriagecreate.biodata&hl=en-US';
+        'https://play.google.com/store/apps/details?id=com.iw.lagnbiodatarmarathi';
     const String message = 'Check out this awesome app: $appLink';
     Share.share(message);
   }

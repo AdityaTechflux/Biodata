@@ -6,6 +6,7 @@ import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugins.GeneratedPluginRegistrant
 import io.flutter.plugin.common.MethodChannel
 import androidx.annotation.NonNull
+import com.google.android.gms.tasks.Task;
 
 class MainActivity: FlutterActivity() {
     private val CHANNEL = "app_settings"

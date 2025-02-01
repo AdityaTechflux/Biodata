@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
 import 'dart:typed_data';
-import 'package:bio_data/screens/biodata_previewpage2.dart';
+// import 'package:bio_data/screens/biodata_previewpage2.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+// import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:flutter_windowmanager/flutter_windowmanager.dart';
@@ -13,15 +13,15 @@ import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../consts/app_urls.dart';
-import '../request/education_details_api.dart';
+// import '../request/education_details_api.dart';
 import 'biodata_preview_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'create_bio_data_screen/create_bio_data_screen.dart';
-import 'dart:ui' as ui;
+// import 'dart:ui' as ui;
 
-import 'package:pdf/pdf.dart';
-import 'package:pdf/widgets.dart' as pw;
+// import 'package:pdf/pdf.dart';
+// import 'package:pdf/widgets.dart' as pw;
 
 import 'template_selection_page.dart';
 
